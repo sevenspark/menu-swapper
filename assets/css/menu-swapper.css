@@ -1,0 +1,18 @@
+
+
+.menu-swapper-theme-locs-table{
+	width:auto;
+}
+.menu-swapper-theme-locs-table th.mswp-slug{
+	width:220px;
+}
+.menu-swapper-theme-locs-table input{
+	width:200px;
+}
+.mswp-ondeck{
+	display:none;
+}
+
+table.menu-swapper-theme-locs-table th.mswp-delete{
+	width:20px;
+}
