@@ -2,12 +2,11 @@
 /*
 Plugin Name: Menu Swapper
 Plugin URI: http://sevenspark.com
-Description: Swap menus on each page
+Description: Register custom theme locations and swap menus on each Post or Page
 Author: Chris Mavricos, SevenSpark
 Author URI: http://sevenspark.com
 Version: 1.0.0
 Text Domain: menuswap
-Domain Path: languages
 */
 
 // Exit if accessed directly
@@ -15,11 +14,6 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 if ( !class_exists( 'Menu_Swapper' ) ) :
 
-/**
- * Main Easy_Digital_Downloads Class
- *
- * @since v1.4
- */
 
 final class Menu_Swapper {
 	/** Singleton *************************************************************/
@@ -39,10 +33,6 @@ final class Menu_Swapper {
 	/**
 	 * Setup plugin constants
 	 *
-	 * @since 1.0
-	 * @access private
-	 * @uses plugin_dir_path() To generate EDD plugin path
-	 * @uses plugin_dir_url() To generate EDD plugin url
 	 */
 	private function setup_constants() {
 		// Plugin version
