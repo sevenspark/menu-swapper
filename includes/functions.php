@@ -26,12 +26,12 @@ add_action( 'init', 'mswp_register_menus' , 20 );
 function mswp_swap_theme_location_filter( $args ){
 	global $post;
 	
-	if( $post->ID ){
+	if( $post && $post->ID ){
 		$swap_loc = get_post_meta( $post->ID , MSWP_LOC_POST_META , true );
 		$target_loc = get_post_meta( $post->ID , MSWP_TARGET_POST_META , true );
 
-		//Check if swap is set at all
-		if( $swap_loc != '' ){
+		//Check if swap & target are set at all 
+		if( $swap_loc != '' && $target_loc != 'none' ){
 
 			//Check whether we should swap this location
 			if( $target_loc == $args['theme_location'] ||
