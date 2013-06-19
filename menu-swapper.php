@@ -5,7 +5,7 @@ Plugin URI: http://sevenspark.com
 Description: Register custom theme locations and swap menus on each Post or Page
 Author: Chris Mavricos, SevenSpark
 Author URI: http://sevenspark.com
-Version: 1.0.0
+Version: 1.0.1
 Text Domain: menuswap
 */
 

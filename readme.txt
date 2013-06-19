@@ -4,7 +4,7 @@ Donate link: http://bit.ly/DonateResponsiveSelect
 Tags: menu, switch, swap, change
 Requires at least: 3.5.1
 Tested up to: 3.5.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ None yet.
 
 
 == Changelog ==
+
+= 1.1 =
+* Set the default to not affect any menus so that when Menu Swapper is not needed it won't inadvertently swap your menus
 
 = 1.0 =
 * Initial submission
