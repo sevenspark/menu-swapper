@@ -37,7 +37,7 @@ function mswp_show_swap_meta_box() {
 	<h4>Replace this Theme Location</h4>
 	<select name="mswp-target-theme-loc">
 		<option value="none">None (Swapper will not affect menu)</option>
-		<option value="all">Any/All (will affect all menus)</option>
+		<option value="all" <?php if( $target_loc == 'all' ): ?>selected="selected"<?php endif; ?> >Any/All (will affect all menus)</option>
 		<?php foreach( $theme_locations as $slug => $name ): ?>
 		<option value="<?php echo $slug;?>" <?php if( $target_loc == $slug ): ?>selected="selected"<?php endif; ?> ><?php echo $name; ?></option>
 		<?php endforeach; ?>	
