@@ -10,15 +10,15 @@ function mswp_add_plugin_page(){
 
 function mswp_create_admin_page(){
 	?>
-	<div class="wrap">
+	<div class="wrap mswp-wrap">
 		<?php screen_icon(); ?>
-		<h2>Menu Swapper Settings</h2>			
+		<h2>Menu Swapper Settings <small>v<?php echo MSWP_VERSION; ?></small></h2>			
 		<form method="post" action="options.php">
 		<?php
 			settings_fields( 'mswp_option_group' );	
 			do_settings_sections( 'mswp-setting-admin' );
 		?>
-		<?php submit_button(); ?>
+		<?php submit_button( 'Save Custom Theme Locations' ); ?>
 		</form>
 	</div>
 	<?php
@@ -32,14 +32,14 @@ function mswp_page_init(){
 		
 	add_settings_section(
 		'mswp_section_1',
-		'Settings',
+		'Custom Theme Locations',
 		'mswp_print_section_info',
 		'mswp-setting-admin'
 	);	
 		
 	add_settings_field(
 		'mswp_theme_locations', 
-		'Custom Theme Locations', 
+		'', 
 		'mswp_create_multitext_field', 
 		'mswp-setting-admin',
 		'mswp_section_1'			
@@ -98,6 +98,14 @@ function mswp_create_multitext_field( $args ){
 	}
 
 	?>
+	<div class="mswp-tips">
+		<ol>
+			<li>Create a new theme location below and save your changes</li>
+			<li>Visit <a href="<?php echo admin_url( 'nav-menus.php?action=locations' ); ?>">Appearance > Menus > Manage Locations</a> to assign a menu to this theme location</li>
+			<li>Go to any post and select which theme location to replace in the Menu Swapper meta box.</li>
+		</ol>
+	</div>
+
 	<table class="menu-swapper-theme-locs-table wp-list-table widefat" >
 		<tr>
 			<th class="mswp-delete">Clear</th>
@@ -108,7 +116,7 @@ function mswp_create_multitext_field( $args ){
 		if( $k%2 == 0 ) $class=' class="alternate"';
 		?>
 		<tr <?php echo $class; ?>>
-			<td><a href="#" class="mswp-delete-theme-location">&times;</a></td>
+			<td class="mswp-delete-x"><a href="#" class="mswp-delete-theme-location">&times;</a></td>
 			<td>
 			<input type="text" class="mswp_theme_locations_slug"
 				id="mswp_theme_locations_slug_<?php echo $k; ?>"
@@ -129,7 +137,7 @@ function mswp_create_multitext_field( $args ){
 	?>
 
 		<tr class="mswp-ondeck">
-			<td><a href="#" class="mswp-delete-theme-location">&times;</a></td>
+			<td class="mswp-delete-x"><a href="#" class="mswp-delete-theme-location">&times;</a></td>
 			<td>
 			<input type="text" class="mswp_theme_locations_slug"
 				name="mswp_theme_locations" 
