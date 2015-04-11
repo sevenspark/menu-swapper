@@ -1,4 +1,4 @@
-wp-menu-swapper
+WordPress Menu Swapper
 ===============
 
-Register custom theme locations and easily swap menus on individual Pages or Posts.
+Register custom menu theme locations and easily swap menus on individual WordPress Pages or Posts.
