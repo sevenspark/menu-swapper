@@ -37,10 +37,11 @@ function mswp_swap_theme_location_filter( $args ){
 			if( $target_loc == $args['theme_location'] ||
 				$target_loc == 'all' ){
 				$args['theme_location'] = $swap_loc;
+				if( isset( $args['menu'] ) ) unset( $args['menu'] );
 			}
 		}
 	}
-	//echo $args['theme_location'];
+
 	return $args;
 }
 add_filter( 'wp_nav_menu_args' , 'mswp_swap_theme_location_filter' , 30 );
