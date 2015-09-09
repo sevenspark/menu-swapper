@@ -26,7 +26,7 @@ add_action( 'init', 'mswp_register_menus' , 20 );
 function mswp_swap_theme_location_filter( $args ){
 	global $post;
 	
-	if( $post && $post->ID ){
+	if( is_single() && $post && $post->ID ){
 		$swap_loc = get_post_meta( $post->ID , MSWP_LOC_POST_META , true );
 		$target_loc = get_post_meta( $post->ID , MSWP_TARGET_POST_META , true );
 
@@ -37,7 +37,19 @@ function mswp_swap_theme_location_filter( $args ){
 			if( $target_loc == $args['theme_location'] ||
 				$target_loc == 'all' ){
 				$args['theme_location'] = $swap_loc;
-				if( isset( $args['menu'] ) ) unset( $args['menu'] );
+
+				if( isset( $args['menu'] ) ){
+					//Special for WPML
+					if( defined( 'ICL_SITEPRESS_VERSION' ) && function_exists( 'icl_object_id' ) ) {
+						if( is_object( $args['menu'] ) ){
+							$locations = get_nav_menu_locations();
+							if ( isset( $args[ 'theme_location' ] ) && isset( $locations[ $args[ 'theme_location' ] ] ) ) {
+								$args[ 'menu' ] = icl_object_id( $locations[ $args[ 'theme_location' ] ], 'nav_menu' );
+							}
+						}
+					}
+					else unset( $args['menu'] );
+				}
 			}
 		}
 	}
@@ -47,3 +59,9 @@ function mswp_swap_theme_location_filter( $args ){
 add_filter( 'wp_nav_menu_args' , 'mswp_swap_theme_location_filter' , 30 );
 
 
+
+function mswpp( $data ){
+	echo '<pre>';
+	print_r( $data );
+	echo '</pre>';
+}
