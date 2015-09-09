@@ -46,6 +46,8 @@ None yet.
 
 * Add WPML swapper check
 * Don't unset 'menu' argument to avoid invalid array index access in core
+* Fix non-highlighting of any/all option
+* Allow swapping only on posts, Pages, and front page
 
 = 1.1.0.1 =
 
