@@ -26,7 +26,7 @@ add_action( 'init', 'mswp_register_menus' , 20 );
 function mswp_swap_theme_location_filter( $args ){
 	global $post;
 
-	if( ( is_single() || is_front_page() ) && $post && $post->ID ){
+	if( ( is_single() || is_singular() || is_front_page() ) && $post && $post->ID ){
 		$swap_loc = get_post_meta( $post->ID , MSWP_LOC_POST_META , true );
 		$target_loc = get_post_meta( $post->ID , MSWP_TARGET_POST_META , true );
 
