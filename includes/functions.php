@@ -48,7 +48,7 @@ function mswp_swap_theme_location_filter( $args ){
 							}
 						}
 					}
-					else unset( $args['menu'] );
+					else $args['menu'] = ''; //unset( $args['menu'] );
 				}
 			}
 		}
