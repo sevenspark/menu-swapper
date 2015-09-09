@@ -2,9 +2,9 @@
 Contributors: sevenspark
 Donate link: http://bit.ly/DonateResponsiveSelect
 Tags: menu, switch, swap, change
-Requires at least: 3.5.1
-Tested up to: 4.2
-Stable tag: 1.1
+Requires at least: 4.0
+Tested up to: 4.3
+Stable tag: 1.1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,15 @@ None yet.
 
 
 == Changelog ==
+
+= 1.1.0.2 =
+
+* Add WPML swapper check
+* Don't unset 'menu' argument to avoid invalid array index access in core
+
+= 1.1.0.1 =
+
+* Previous deployment erroneously removed assets folder, this re-adds it so that the Control Panel page will work properly
 
 = 1.1 =
 
