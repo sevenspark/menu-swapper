@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Menu Swapper
-Plugin URI: http://sevenspark.com
+Plugin URI: https://sevenspark.com
 Description: Register custom theme locations and swap menus on each Post or Page
 Author: Chris Mavricos, SevenSpark
-Author URI: http://sevenspark.com
-Version: 1.1.0.2
+Author URI: https://sevenspark.com
+Version: 1.1.1
 Text Domain: menuswap
 */
 
@@ -38,7 +38,7 @@ final class Menu_Swapper {
 		// Plugin version
 
 		if( ! defined( 'MSWP_VERSION' ) )
-			define( 'MSWP_VERSION', '1.1.0.2' );
+			define( 'MSWP_VERSION', '1.1.1' );
 
 		// Plugin Folder URL
 		if( ! defined( 'MSWP_PLUGIN_URL' ) )
@@ -52,8 +52,8 @@ final class Menu_Swapper {
 		if( ! defined( 'MSWP_PLUGIN_FILE' ) )
 			define( 'MSWP_PLUGIN_FILE', __FILE__ );
 
-		define( 'MSWP_LOC_POST_META' , 'mswp-swap-loc' ); 
-		define( 'MSWP_TARGET_POST_META' , 'mswp-target-loc' ); 
+		define( 'MSWP_LOC_POST_META' , 'mswp-swap-loc' );
+		define( 'MSWP_TARGET_POST_META' , 'mswp-target-loc' );
 		define( 'MSWP_THEME_LOC_OPTION' , 'mswp_theme_locations' );
 	}
 
@@ -73,7 +73,7 @@ final class Menu_Swapper {
 		if( is_admin() ) {
 			require_once MSWP_PLUGIN_DIR . 'includes/admin-page.php';
 			require_once MSWP_PLUGIN_DIR . 'includes/meta-box.php';
-			
+
 		} else {
 			//require_once KB_PLUGIN_DIR . 'includes/process-download.php';
 		}
@@ -99,4 +99,3 @@ function MSWP() {
 }
 
 MSWP();
-

@@ -3,8 +3,8 @@ Contributors: sevenspark
 Donate link: http://bit.ly/DonateResponsiveSelect
 Tags: menu, switch, swap, change
 Requires at least: 4.0
-Tested up to: 4.3
-Stable tag: 1.1.0.2
+Tested up to: 5.5
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,10 @@ None yet.
 
 == Changelog ==
 
+= 1.1.1 =
+
+* Security fix: make sure nonce is always checked
+
 = 1.1.0.2 =
 
 * Add WPML swapper check
@@ -63,5 +67,3 @@ None yet.
 
 = 1.0 =
 * Initial submission
-
-
