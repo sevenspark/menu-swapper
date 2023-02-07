@@ -11,7 +11,6 @@ function mswp_add_plugin_page(){
 function mswp_create_admin_page(){
 	?>
 	<div class="wrap mswp-wrap">
-		<?php screen_icon(); ?>
 		<h2>Menu Swapper Settings <small>v<?php echo MSWP_VERSION; ?></small></h2>			
 		<form method="post" action="options.php">
 		<?php
