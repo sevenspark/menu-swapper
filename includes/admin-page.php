@@ -107,7 +107,7 @@ function mswp_create_multitext_field( $args ){
 
 	<table class="menu-swapper-theme-locs-table wp-list-table widefat" >
 		<tr>
-			<th class="mswp-delete">Remove</th>
+			<th class="mswp-delete">Clear</th>
 			<th class="mswp-slug">Theme Location Slug</th>
 			<th>Theme Location Name</th>
 		</tr>

@@ -12,6 +12,7 @@
 
 .menu-swapper-theme-locs-table {
   width: 100%;
+  max-width: 1200px;
 }
 .menu-swapper-theme-locs-table tr {
 }
