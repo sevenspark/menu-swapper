@@ -4,12 +4,17 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
 
-        build: {
-            //cwd: 'source',
-            src: ['**', '!**/node_modules/**', '!**/pro/**', '!**/wp-assets/**', '!bellows-pro.php', '!.gitignore', '!package.json', '!Gruntfile.js', '!**/*.report.txt', '!**/_build_pro/**'],
-            dest: './build',
-            expand: true,
+        clean: {
+            build: ['./build'],
+        },
+        copy: {
+            build: {
+                //cwd: 'source',
+                src: ['**', '!**/node_modules/**', '!**/pro/**', '!**/wp-assets/**', '!bellows-pro.php', '!.gitignore', '!package.json', '!package-lock.json', '!README.md', '!Gruntfile.js', '!**/*.report.txt', '!**/_build_pro/**'],
+                dest: './build',
+                expand: true,
 
+            },
         },
         wp_deploy: {
             deploy: {
@@ -22,4 +27,12 @@ module.exports = function (grunt) {
             }
         },
     })
+
+
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    // grunt.loadNpmTasks('grunt-wp-deploy');
+
+    grunt.registerTas('clean', ['clean:build']);
+    grunt.registerTask('build', ['copy:build']);
 };
