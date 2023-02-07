@@ -5,7 +5,9 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         clean: {
-            build: ['./build'],
+            build: {
+                src: ['./build'],
+            },
         },
         copy: {
             build: {
@@ -33,6 +35,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     // grunt.loadNpmTasks('grunt-wp-deploy');
 
-    grunt.registerTas('clean', ['clean:build']);
-    grunt.registerTask('build', ['copy:build']);
+    // grunt.registerTask('clean', ['clean:build']); // causes issues due to same task name I believe
+    grunt.registerTask('build', ['clean:build', 'copy:build']);
 };
