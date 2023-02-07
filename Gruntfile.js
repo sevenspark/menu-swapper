@@ -6,16 +6,14 @@ module.exports = function (grunt) {
 
         clean: {
             build: {
-                src: ['./build'],
+                src: ['./__/build'],
             },
         },
         copy: {
             build: {
-                //cwd: 'source',
-                src: ['**', '!**/node_modules/**', '!**/pro/**', '!**/wp-assets/**', '!bellows-pro.php', '!.gitignore', '!package.json', '!package-lock.json', '!README.md', '!Gruntfile.js', '!**/*.report.txt', '!**/_build_pro/**'],
-                dest: './build',
+                src: ['**', '!**/node_modules/**', '!**/__/**', '!**/wp-assets/**', '!bellows-pro.php', '!.gitignore', '!package.json', '!package-lock.json', '!README.md', '!Gruntfile.js', '!**/*.report.txt', '!**/_build_pro/**'],
+                dest: './__/build',
                 expand: true,
-
             },
         },
         wp_deploy: {
