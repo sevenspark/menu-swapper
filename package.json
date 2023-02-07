@@ -1,0 +1,22 @@
+{
+  "name": "menu-swapper",
+  "version": "1.0.0",
+  "description": "Swap WordPress menus by theme location",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevenspark/menu-swapper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sevenspark/menu-swapper/issues"
+  },
+  "homepage": "https://github.com/sevenspark/menu-swapper#readme",
+  "devDependencies": {
+    "grunt-wp-deploy": "^2.1.2"
+  }
+}
