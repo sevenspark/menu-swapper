@@ -108,7 +108,7 @@ function mswp_create_multitext_field( $args ){
 
 	<table class="menu-swapper-theme-locs-table wp-list-table widefat" >
 		<tr>
-			<th class="mswp-delete">Clear</th>
+			<th class="mswp-delete">Remove</th>
 			<th class="mswp-slug">Theme Location Slug</th>
 			<th>Theme Location Name</th>
 		</tr>
@@ -116,12 +116,13 @@ function mswp_create_multitext_field( $args ){
 		if( $k%2 == 0 ) $class=' class="alternate"';
 		?>
 		<tr <?php echo $class; ?>>
-			<td class="mswp-delete-x"><a href="#" class="mswp-delete-theme-location">&times;</a></td>
+			<td class="mswp-delete mswp-delete-x"><a href="#" class="mswp-delete-theme-location">&times;</a></td>
 			<td>
 			<input type="text" class="mswp_theme_locations_slug"
 				id="mswp_theme_locations_slug_<?php echo $k; ?>"
 				name="mswp_theme_locations[<?php echo $k; ?>][slug]" 
-				value="<?php echo $loc['slug']; ?>" /> &rarr;
+				value="<?php echo $loc['slug']; ?>" /> 
+			<span class="mswp-tl-arrow">&rarr;</span>
 			</td>
 			<td>
 			<input type="text"  class="mswp_theme_locations_name"
@@ -137,7 +138,7 @@ function mswp_create_multitext_field( $args ){
 	?>
 
 		<tr class="mswp-ondeck">
-			<td class="mswp-delete-x"><a href="#" class="mswp-delete-theme-location">&times;</a></td>
+			<td class="mswp-delete mswp-delete-x"><a href="#" class="mswp-delete-theme-location">&times;</a></td>
 			<td>
 			<input type="text" class="mswp_theme_locations_slug"
 				name="mswp_theme_locations" 
