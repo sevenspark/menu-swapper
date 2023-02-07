@@ -1,12 +1,14 @@
 <?php
-/*
-Plugin Name: Menu Swapper
-Plugin URI: https://sevenspark.com
-Description: Register custom theme locations and swap menus on each Post or Page
-Author: Chris Mavricos, SevenSpark
-Author URI: https://sevenspark.com
-Version: 1.2
-Text Domain: menuswap
+/**
+ * Plugin Name: Menu Swapper
+ * Plugin URI: https://sevenspark.com
+ * Description: Register custom theme locations and swap menus on each Post or Page
+ * Author: Chris Mavricos, SevenSpark
+ * Author URI: https://sevenspark.com
+ * Version: 1.2
+ * Requies at least: 5.5
+ * Requires PHP: 7.4
+ * Text Domain: menuswap
 */
 
 // Exit if accessed directly
