@@ -23,6 +23,7 @@ module.exports = function (grunt) {
                     svn_user: 'sevenspark',
                     build_dir: '__/build', //relative path to your build directory
                     // assets_dir: 'wp-assets' //relative path to your assets directory (optional).
+                    tmp_dir: '../../tmp',
                 },
             }
         },
@@ -31,8 +32,11 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    // grunt.loadNpmTasks('grunt-wp-deploy');
+    grunt.loadNpmTasks('grunt-wp-deploy');
 
     // grunt.registerTask('clean', ['clean:build']); // causes issues due to same task name I believe
     grunt.registerTask('build', ['clean:build', 'copy:build']);
+
+    // Deploy
+    grunt.registerTask('deploy', ['wp_deploy:deploy']);
 };
