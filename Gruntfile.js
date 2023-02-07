@@ -21,7 +21,7 @@ module.exports = function (grunt) {
                 options: {
                     plugin_slug: 'menu-swapper',
                     svn_user: 'sevenspark',
-                    build_dir: 'build', //relative path to your build directory
+                    build_dir: '__/build', //relative path to your build directory
                     // assets_dir: 'wp-assets' //relative path to your assets directory (optional).
                 },
             }

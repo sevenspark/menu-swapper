@@ -5,5 +5,4 @@ node_modules
 
 *.report.txt
 
-__/
-build/
+__/build/
